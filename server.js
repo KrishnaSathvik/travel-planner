@@ -20,6 +20,33 @@ app.get('/api/test', (req, res) => {
   res.send('API is working');
 });
 
+// Simple schema and model for testing
+const TestSchema = new mongoose.Schema({
+  name: String
+});
+const TestModel = mongoose.model('Test', TestSchema);
+
+// Route to add test data to MongoDB
+app.post('/api/test', async (req, res) => {
+  const testData = new TestModel({ name: req.body.name });
+  try {
+    await testData.save();
+    res.status(201).send('Test data saved');
+  } catch (error) {
+    res.status(500).send('Error saving test data');
+  }
+});
+
+// Route to retrieve test data from MongoDB
+app.get('/api/test/data', async (req, res) => {
+  try {
+    const testData = await TestModel.find();
+    res.status(200).json(testData);
+  } catch (error) {
+    res.status(500).send('Error retrieving test data');
+  }
+});
+
 // Routes
 const userRoutes = require('./routes/user');
 const blogRoutes = require('./routes/blog');
