@@ -30,4 +30,10 @@ document.addEventListener('DOMContentLoaded', function() {
             alert(`Error: ${result.message}`);
         }
     });
+
+    document.getElementById('chatButton').addEventListener('click', function() {
+        const chatContent = document.getElementById('chatContent');
+        chatContent.classList.toggle('hidden');
+    });
 });
+
