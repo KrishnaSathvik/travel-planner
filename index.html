@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalized Travel Itinerary Planning</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Personalized Travel Itinerary Planning</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="container">
+            <h2>Welcome to Our Travel Planning Service</h2>
+            <p>We offer personalized travel planning and booking services to ensure a seamless and memorable travel experience.</p>
+            <a href="#services" class="cta">Get Started</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Basic Package</h3>
+                <p>General travel advice, basic itinerary outline, booking recommendations.</p>
+                <p>Price: $50 - $100</p>
+            </div>
+            <div class="service">
+                <h3>Standard Package</h3>
+                <p>Customized itinerary, booking assistance for flights, hotels, and activities.</p>
+                <p>Price: $150 - $300</p>
+            </div>
+            <div class="service">
+                <h3>Premium Package</h3>
+                <p>Fully customized itinerary, VIP experiences, 24/7 support.</p>
+                <p>Price: $400 - $700</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing exceptional travel planning services tailored to your preferences.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contactForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="contactMethod">Preferred Contact Method:</label>
+                <select id="contactMethod" name="contactMethod" required>
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <h2>Travel Details</h2>
+                <label for="travelers">Number of Travelers:</label>
+                <input type="number" id="travelers" name="travelers" required>
+
+                <label for="travelerTypes">Traveler Types:</label>
+                <input type="checkbox" name="travelerTypes" value="Adults"> Adults
+                <input type="checkbox" name="travelerTypes" value="Children"> Children
+                <input type="checkbox" name="travelerTypes" value="Seniors"> Seniors
+                <input type="checkbox" name="travelerTypes" value="Pets"> Pets
+
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+
+                <label for="destination">Destination(s):</label>
+                <input type="text" id="destination" name="destination" required>
+
+                <h2>Travel Preferences</h2>
+                <label for="travelType">Travel Type:</label>
+                <input type="checkbox" name="travelType" value="Family"> Family
+                <input type="checkbox" name="travelType" value="Solo"> Solo
+                <input type="checkbox" name="travelType" value="Friends"> Friends
+                <input type="checkbox" name="travelType" value="Business"> Business
+                <input type="checkbox" name="travelType" value="Other"> Other
+
+                <label for="travelStyle">Travel Style:</label>
+                <input type="checkbox" name="travelStyle" value="Adventure"> Adventure
+                <input type="checkbox" name="travelStyle" value="Relaxation"> Relaxation
+                <input type="checkbox" name="travelStyle" value="Cultural"> Cultural
+                <input type="checkbox" name="travelStyle" value="Luxury"> Luxury
+                <input type="checkbox" name="travelStyle" value="Budget"> Budget
+                <input type="checkbox" name="travelStyle" value="Eco-friendly"> Eco-friendly
+                <input type="checkbox" name="travelStyle" value="Other"> Other
+
+                <label for="accommodation">Accommodation Preferences:</label>
+                <input type="checkbox" name="accommodation" value="Hotels"> Hotels
+                <input type="checkbox" name="accommodation" value="Resorts"> Resorts
+                <input type="checkbox" name="accommodation" value="Vacation Rentals"> Vacation Rentals
+                <input type="checkbox" name="accommodation" value="Hostels"> Hostels
+                <input type="checkbox" name="accommodation" value="Other"> Other
+
+                <label for="flightPreferences">Flight Preferences:</label>
+                <input type="checkbox" name="flightPreferences" value="Economy"> Economy
+                <input type="checkbox" name="flightPreferences" value="Business"> Business
+                <input type="checkbox" name="flightPreferences" value="First Class"> First Class
+                <input type="checkbox" name="flightPreferences" value="Direct Flights"> Direct Flights
+                <input type="checkbox" name="flightPreferences" value="Connecting Flights"> Connecting Flights
+                <input type="checkbox" name="flightPreferences" value="No Preference"> No Preference
+
+                <label for="carRental">Car Rental:</label>
+                <input type="radio" name="carRental" value="Yes"> Yes
+                <input type="radio" name="carRental" value="No"> No
+                <input type="radio" name="carRental" value="Maybe"> Maybe
+
+                <label for="specialRequests">Special Requirements or Requests:</label>
+                <textarea id="specialRequests" name="specialRequests"></textarea>
+
+                <h2>Activities and Interests</h2>
+                <label for="interests">Interests:</label>
+                <input type="checkbox" name="interests" value="Beach"> Beach
+                <input type="checkbox" name="interests" value="Hiking"> Hiking
+                <input type="checkbox" name="interests" value="Kayaking"> Kayaking
+                <input type="checkbox" name="interests" value="Scuba Diving"> Scuba Diving
+                <input type="checkbox" name="interests" value="Sightseeing"> Sightseeing
+                <input type="checkbox" name="interests" value="Cultural Tours"> Cultural Tours
+                <input type="checkbox" name="interests" value="Shopping"> Shopping
+                <input type="checkbox" name="interests" value="Dining"> Dining
+                <input type="checkbox" name="interests" value="Nightlife"> Nightlife
+                <input type="checkbox" name="interests" value="Other"> Other
+
+                <label for="mustSee">Must-See Attractions:</label>
+                <textarea id="mustSee" name="mustSee"></textarea>
+
+                <label for="preferredActivities">Preferred Activities:</label>
+                <textarea id="preferredActivities" name="preferredActivities"></textarea>
+
+                <label for="dietaryRestrictions">Dietary Restrictions:</label>
+                <input type="text" id="dietaryRestrictions" name="dietaryRestrictions">
+
+                <h2>Budget</h2>
+                <label for="totalBudget">Total Budget:</label>
+                <input type="number" id="totalBudget" name="totalBudget" required>
+
+                <label for="budgetAllocation">Budget Allocation:</label>
+                <input type="checkbox" name="budgetAllocation" value="Accommodation"> Accommodation
+                <input type="checkbox" name="budgetAllocation" value="Flights"> Flights
+                <input type="checkbox" name="budgetAllocation" value="Activities"> Activities
+                <input type="checkbox" name="budgetAllocation" value="Dining"> Dining
+                <input type="checkbox" name="budgetAllocation" value="Other"> Other
+
+                <h2>Pricing Packages</h2>
+                <label for="package">Which Package Are You Interested In?</label>
+                <select id="package" name="package" required>
+                    <option value="Basic">Basic Package ($50 - $100)</option>
+                    <option value="Standard">Standard Package ($150 - $300)</option>
+                    <option value="Premium">Premium Package ($400 - $700)</option>
+                    <option value="Hourly">Hourly Rate Consultation ($50 - $100 per hour)</option>
+                </select>
+
+                <h2>Additional Information</h2>
+                <label for="previousExperience">Previous Travel Experience:</label>
+                <textarea id="previousExperience" name="previousExperience"></textarea>
+
+                <label for="comments">Any Other Comments or Preferences:</label>
+                <textarea id="comments" name="comments"></textarea>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Personalized Travel Itinerary Planning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="chatbox">
+        <button id="chatButton">Chat with us</button>
+        <div id="chatContent" class="hidden">
+            <h3>Live Chat</h3>
+            <p>How can we help you?</p>
+            <!-- Chatbot or live chat integration will go here -->
+        </div>
+    </div>
+</body>
+</html>
+
